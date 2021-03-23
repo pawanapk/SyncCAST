@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:background="@drawable/splashback"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/syncx"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_back"
+        android:hint="Full Name"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"></EditText>
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_back"
+        android:hint="Email Id"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/etname"></EditText>
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_back"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/etemail"></EditText>
+
+    <EditText
+        android:id="@+id/etphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_back"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword"></EditText>
+
+    <CheckBox
+        android:id="@+id/ctvnotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        android:text="I want to receive Newsletters with the offer"
+        android:textColor="#FFF"
+        android:textSize="10sp"
+        app:buttonTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/etphone"></CheckBox>
+
+    <LinearLayout
+        android:id="@+id/linear_btnregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/registerbtn_back"
+        app:layout_constraintTop_toBottomOf="@+id/ctvnotification">
+
+        <Button
+            android:id="@+id/btnregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="Register"
+            android:textColor="@color/pinkred"></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_tvregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linear_btnregister">
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:text="or Register with  "
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/v1"></TextView>
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#CDCDCD"
+            app:layout_constraintLeft_toRightOf="@+id/tv_register"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_btnregister"></View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_glogin"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvalreadylogin"
+        android:background="@drawable/glogin_icon"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/linear_fblogin"
+        app:layout_constraintTop_toBottomOf="@+id/linear_tvregister">
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/gsignin"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toLeftOf="@+id/fblogin"></com.google.android.gms.common.SignInButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_fblogin"
+        android:background="@drawable/fblogin_icon"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvalreadylogin"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@+id/linear_glogin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_tvregister">
+        <!--<com.facebook.login.widget.LoginButton
+            android:id="@+id/fblogin"
+            xmlns:fb="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/FacebookLoginButton"
+            app:layout_constraintLeft_toRightOf="@+id/gsignin"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_tvregister"></com.facebook.login.widget.LoginButton>
+-->
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:id="@+id/tvalreadylogin"
+        android:text="Already Register Login here"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnlogin"></TextView>
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/loginbtn_back"
+        android:text="Login"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"></Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

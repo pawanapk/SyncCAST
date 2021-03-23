@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sync</string>
+
+    <string name="facebook_app_id">2943896915838088</string>
+    <string name="fb_login_protocol_scheme">fb2943896915838088</string>
+    <string name="receiver_id">BF82EB47</string>
+    <string name="media_route_menu_title">Play on&#8230;</string>
+
+</resources>
